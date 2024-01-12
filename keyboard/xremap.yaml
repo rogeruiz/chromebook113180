@@ -1,0 +1,16 @@
+modmap:
+  - name: Global
+    remap:
+      LeftMeta: LeftCTRL
+  - name: Function keys
+    remap:
+      KEY_F1: KEY_BACK
+      KEY_F2: KEY_FORWARD
+      KEY_F3: KEY_REFRESH
+keymap:
+  - name: Toggle fullscreen
+    remap:
+      KEY_F4: M-f
+  - name: Open dmenu
+    remap:
+      KEY_F5: M-d
