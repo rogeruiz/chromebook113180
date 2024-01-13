@@ -17,7 +17,7 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
-vim.o.smarindent = true
+vim.o.smartindent = true
 vim.o.whichwrap = "<,>,h,l"
 vim.o.swapfile = false
 vim.o.listchars = "eol:¬,tab:›·,trail:·,extends:›,precedes:‹"
@@ -26,7 +26,7 @@ vim.o.splitright = true
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldlevel = 5
-vim.o.spelling = "en,es"
+vim.o.spelllang = "en,es"
 
 -- [[ basic keymaps ]]
 

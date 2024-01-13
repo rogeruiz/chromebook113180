@@ -1,4 +1,4 @@
-local yo_lualine = function ()
+local yo_lualine = function()
     local lualine_colors = require("catppuccin.palettes").get_palette()
     local lualine_navic = require("nvim-navic")
     local icons = require("icons")

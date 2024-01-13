@@ -26,8 +26,14 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/starship.toml".source = ./config/starship.toml;
+
+    # Copiar unos archivos de Neovim que no se pueden configurar con Nix por
+    # ahora.
     ".config/nvim/lua/icons.lua".source = ./nvim/lua/icons.lua;
     ".config/nvim/lua/figlet_headers.lua".source = ./nvim/lua/figlet_headers.lua;
+    ".config/nvim/ftplugin/lua.lua".source = ./nvim/lua/ftplugin/lua.lua;
+    ".config/nvim/.luacheckrc".source = ./nvim/lua/.luacheckrc;
+
     ".gitconfig".source = ./config/gitconfig;
     ".gitignore_global".source = ./config/gitignore_global;
   };
@@ -54,7 +60,7 @@
 
       # Estas alias son para hacer mi vida un poco mas facil
       update = "sudo nixos-rebuild switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/#cb113180";
-      hupdate = "home-manager switch --impure --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/home-manager#yo";
+      hupdate = "home-manager --impure switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/home-manager#yo";
     };
     enableCompletion = true;
     enableAutosuggestions = true;

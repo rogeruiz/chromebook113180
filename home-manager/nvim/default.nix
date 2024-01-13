@@ -15,6 +15,7 @@ in
     ./colorscheme.nix
     ./fidget.nix
     ./gitsigns.nix
+    ./gopher.nix
     ./indent-blankline.nix
     ./lualine.nix
     ./neo-tree.nix
@@ -27,10 +28,20 @@ in
 
     # Este no es un plugin en si pero un archivo de Lua que
     # aggrega LSP y autocompletion y mas.
-    ./language-server.nix
+    #./language-server.nix
+    ./lsp-diagnostics.nix
+    ./lsp-fmt.nix
+    ./lsp-highlights.nix
+    ./lsp-keymaps.nix
+    ./lsp-ui.nix
 
     # tiene que estar al final pa que se imprime al principio
     ./base.nix
+  ];
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+    }))
   ];
   programs.neovim = {
     enable = true;
@@ -39,16 +50,16 @@ in
     vimAlias = true;
     vimdiffAlias = true;
     withNodeJs = true;
+    package = pkgs.neovim-nightly;
     plugins = with pkgs.vimPlugins; [
       (
         nvim-treesitter.withPlugins (
           p: [
-            p.c
-            p.cpp
             p.go
             p.lua
             p.markdown
             p.markdown_inline
+            p.nix
             p.python
             p.query
             p.rust
@@ -65,17 +76,11 @@ in
       vim-sleuth
 
       popup-nvim
-      vim-dadbod
-      vim-dadbod-ui
-      vim-dadbod-completion
 
       editorconfig-nvim
       vim-illuminate
 
-      {
-        plugin = neodev-nvim;
-        config = "lua require('neodev').setup()";
-      }
+      neodev-nvim
 
       (fromGitHub {
         user = "echasnovski";
@@ -88,14 +93,6 @@ in
       (fromGitHub {
         user = "nvim-focus";
         repo = "focus.nvim";
-      })
-      (fromGitHub {
-        user = "monkoose";
-        repo = "nvlime";
-      })
-      (fromGitHub {
-        user = "monkoose";
-        repo = "parsley";
       })
     ];
   };
