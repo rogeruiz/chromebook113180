@@ -10,5 +10,8 @@
     # diffr
 
     lua-language-server
+
+    irssi
+    exercism
   ];
 }
