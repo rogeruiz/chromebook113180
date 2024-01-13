@@ -82,6 +82,14 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # https://nixos.wiki/wiki/Storage_optimization#Moving_the_store
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/e6d37150-545c-4ec8-956b-958e70627757";
+    fsType = "ext4";
+    neededForBoot = true;
+    options = [ "noatime" ];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
