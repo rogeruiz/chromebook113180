@@ -4,11 +4,12 @@ let
   pkgs = import <nixpkgs> {};
 in
 
-pkgs.vimUtils.buildVimPluginFrom2Nix {
-  package_name = "${lib.strings.sanitizeDerivationName repo}";
+pkgs.vimUtils.buildVimPlugin rec {
+  pname = "${pkgs.lib.strings.sanitizeDerivationName repo}";
   version = ref;
   src = builtins.fetchGit {
-    url = "https://github.com/${repo}.git";
-    ref = ref;
+    url = "https://github.com/${user}/${repo}.git";
+    inherit ref;
   };
+  inherit buildScript;
 }

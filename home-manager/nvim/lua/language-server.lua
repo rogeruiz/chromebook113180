@@ -1,7 +1,7 @@
 local lsp_language_servers = function()
-
+    local icons = require("icons")
     local lsp_zero = require("lsp-zero")
-    lsp_zero.on_attach(function(client, bufnr)
+    lsp_zero.on_attach(function(_, bufnr)
         lsp_zero.default_keymaps({buffer = bufnr})
     end)
     require('lspconfig').lua_ls.setup({})
@@ -91,6 +91,8 @@ local lsp_language_servers = function()
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
           { name = "path" },
+        }, {
+          { name = "cmdline" },
         }),
       }),
     }

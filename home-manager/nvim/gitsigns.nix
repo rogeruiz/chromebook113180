@@ -3,8 +3,8 @@
 {
   programs.neovim = {
     plugins = with pkgs.vimPlugins; [
-      nvim-window-picker
+      gitsigns-nvim
     ];
-    extraLuaConfig = (builtins.readFile ./lua/window_picker.lua)
+    extraLuaConfig = (builtins.readFile ./lua/gitsigns.lua);
   };
 }

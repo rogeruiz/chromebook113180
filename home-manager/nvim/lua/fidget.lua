@@ -1,11 +1,18 @@
 local yo_fidget = function()
     require('fidget').setup({
-        text = {
-            spinner = "triangle",
+        progress = {
+            display = {
+                progress_icon = {
+                    pattern = "dots",
+                    period = 1,
+                },
+            },
         },
-        window = {
-            blend: 30,
-        }
+        notification = {
+            window = {
+                winblend = 30,
+            },
+        },
     })
 end
 

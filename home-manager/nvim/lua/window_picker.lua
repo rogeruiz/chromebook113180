@@ -1,8 +1,5 @@
-return {
-    {
-        's1n7ax/nvim-window-picker',
-        config = function()
-            require 'window-picker'.setup()
-        end,
-    }
-}
+local yo_window_picker = function ()
+    require("window-picker").setup()
+end
+
+yo_window_picker()

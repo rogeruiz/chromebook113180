@@ -2,7 +2,7 @@
 
 {
   programs.neovim = {
-    packages = with pkgs.vimPlugins; [
+    plugins = with pkgs.vimPlugins; [
       none-ls-nvim
       nvim-lspconfig
     ];

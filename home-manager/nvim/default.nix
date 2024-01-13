@@ -11,18 +11,23 @@ in
     # plugins
     ./alpha.nix
     ./autopairs.nix
+    ./colorizer.nix
+    ./colorscheme.nix
+    ./fidget.nix
+    ./gitsigns.nix
     ./indent-blankline.nix
     ./lualine.nix
     ./neo-tree.nix
+    ./none-ls.nix
     ./telekasten.nix
     ./telescope.nix
     ./todo-comments.nix
     ./toggleterm.nix
     ./which-key.nix
 
+    # Este no es un plugin en si pero un archivo de Lua que
+    # aggrega LSP y autocompletion y mas.
     ./language-server.nix
-
-    ./colorscheme.nix
 
     # tiene que estar al final pa que se imprime al principio
     ./base.nix
@@ -71,6 +76,27 @@ in
         plugin = neodev-nvim;
         config = "lua require('neodev').setup()";
       }
+
+      (fromGitHub {
+        user = "echasnovski";
+        repo = "mini.surround";
+      })
+      (fromGitHub {
+        user = "echasnovski";
+        repo = "mini.pairs";
+      })
+      (fromGitHub {
+        user = "nvim-focus";
+        repo = "focus.nvim";
+      })
+      (fromGitHub {
+        user = "monkoose";
+        repo = "nvlime";
+      })
+      (fromGitHub {
+        user = "monkoose";
+        repo = "parsley";
+      })
     ];
   };
 }

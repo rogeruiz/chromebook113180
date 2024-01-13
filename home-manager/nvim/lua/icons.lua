@@ -1,4 +1,4 @@
----@module 'custom.icons'
+---@module 'icons'
 ---@author 'Roger Steve Ruiz'
 ---@license 'MIT'
 
