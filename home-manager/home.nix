@@ -32,7 +32,7 @@
     ".config/nvim/lua/icons.lua".source = ./nvim/lua/icons.lua;
     ".config/nvim/lua/figlet_headers.lua".source = ./nvim/lua/figlet_headers.lua;
     ".config/nvim/ftplugin/lua.lua".source = ./nvim/lua/ftplugin/lua.lua;
-    ".config/nvim/.luacheckrc".source = ./nvim/lua/.luacheckrc;
+    ".config/nvim/.stylua.toml".source = ./nvim/lua/.stylua.toml;
 
     ".gitconfig".source = ./config/gitconfig;
     ".gitignore_global".source = ./config/gitignore_global;
@@ -66,6 +66,11 @@
     enableAutosuggestions = true;
     defaultKeymap = "viins";
     initExtraFirst = "eval \"$(starship init zsh)\"";
+  };
+
+  programs.z-lua = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
 }

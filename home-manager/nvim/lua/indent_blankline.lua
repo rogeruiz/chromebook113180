@@ -1,4 +1,4 @@
-local yo_ibl = function ()
+local yo_ibl = function()
     local colors = require("catppuccin.palettes").get_palette()
 
     local ibl_highlight = {

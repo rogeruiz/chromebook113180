@@ -34,6 +34,7 @@ in
     ./lsp-highlights.nix
     ./lsp-keymaps.nix
     ./lsp-ui.nix
+    ./lsp-complete.nix
 
     # tiene que estar al final pa que se imprime al principio
     ./base.nix
