@@ -54,7 +54,7 @@
 
       # Estas alias son para hacer mi vida un poco mas facil
       update = "sudo nixos-rebuild switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/#cb113180";
-      hupdate = "home-manager switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/home-manager#yo";
+      hupdate = "home-manager switch --impure --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/home-manager#yo";
     };
     enableCompletion = true;
     enableAutosuggestions = true;
