@@ -9,15 +9,15 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     callback = hide_semantic_highlights,
 })
 
--- vim.api.nvim_set_hl(0, "LspReferenceRead", {
---     link = "Search",
--- })
--- vim.api.nvim_set_hl(0, "LspReferenceText", {
---     link = "Search",
--- })
--- vim.api.nvim_set_hl(0, "LspReferenceWrite", {
---     link = "Search",
--- })
+vim.api.nvim_set_hl(0, "LspReferenceRead", {
+    link = "Search",
+})
+vim.api.nvim_set_hl(0, "LspReferenceText", {
+    link = "Search",
+})
+vim.api.nvim_set_hl(0, "LspReferenceWrite", {
+    link = "Search",
+})
 
 vim.opt.updatetime = 400
 

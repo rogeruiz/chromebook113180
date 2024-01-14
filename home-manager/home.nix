@@ -33,6 +33,7 @@
     ".config/nvim/lua/figlet_headers.lua".source = ./nvim/lua/figlet_headers.lua;
     ".config/nvim/ftplugin/lua.lua".source = ./nvim/lua/ftplugin/lua.lua;
     ".config/nvim/.stylua.toml".source = ./nvim/lua/.stylua.toml;
+    ".config/nvim/spell".source = ./nvim/spell;
 
     ".gitconfig".source = ./config/gitconfig;
     ".gitignore_global".source = ./config/gitignore_global;
@@ -59,8 +60,8 @@
       # tf = "terraform";
 
       # Estas alias son para hacer mi vida un poco mas facil
-      update = "sudo nixos-rebuild switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/#cb113180";
-      hupdate = "home-manager --impure switch --flake ~/Developer/oss/rogeruiz/srht/chromebook113180/home-manager#yo";
+      update = "sudo nixos-rebuild switch --flake ~/Developer/oss/rogeruiz/github/chromebook113180/#cb113180";
+      hupdate = "home-manager --impure switch --flake ~/Developer/oss/rogeruiz/github/chromebook113180/home-manager#yo";
     };
     enableCompletion = true;
     enableAutosuggestions = true;

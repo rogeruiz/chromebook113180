@@ -1,30 +1,5 @@
 local yo_lsp_diagnostics = function()
     local i = require("icons").diagnostics
-    -- local function sign_define(args)
-    --     vim.fn.sign_define(args.name, {
-    --         texthl = args.name,
-    --         text = args.text,
-    --         numhl = "",
-    --     })
-    -- end
-
-    -- sign_define({
-    --     name = "DiagnosticSignError",
-    --     text = i.Error
-    -- })
-    -- sign_define({
-    --     name = "DiagnosticSignWarn",
-    --     text = i.Warning,
-    -- })
-    -- sign_define({
-    --     name = "DiagnosticSignHint",
-    --     text = i.Hint,
-    -- })
-    -- sign_define({
-    --     name = "DiagnosticSignInfo",
-    --     text = i.Information,
-    -- })
-    -- Lo de ababjo es para Neovim v0.10+
     vim.diagnostic.config({
         signs = {
             text = {
