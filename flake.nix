@@ -2,7 +2,7 @@
   description = "Mi configuracion de NixOS pa' Dell Chromebook 11 3180";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     xremap-flake.url = "github:xremap/nix-flake";
   };
 
