@@ -104,6 +104,8 @@
     htop
     bottom
 
+    xscreensaver
+
     clipmenu
     xclip
 
