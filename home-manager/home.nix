@@ -33,7 +33,10 @@
     ".config/nvim/lua/figlet_headers.lua".source = ./nvim/lua/figlet_headers.lua;
     ".config/nvim/ftplugin/lua.lua".source = ./nvim/lua/ftplugin/lua.lua;
     ".config/nvim/.stylua.toml".source = ./nvim/lua/.stylua.toml;
-    ".config/nvim/spell".source = ./nvim/spell;
+    # ".config/nvim/spell" = {
+    #   recursive = true;
+    #   source = ./nvim/spell;
+    # };
 
     ".gitconfig".source = ./config/gitconfig;
     ".gitignore_global".source = ./config/gitignore_global;
