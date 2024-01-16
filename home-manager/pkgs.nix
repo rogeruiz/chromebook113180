@@ -19,7 +19,7 @@
     procs
     sd
     tealdeer
-    zoxide
+    # zoxide
 
     httpie
     htop

@@ -35,6 +35,9 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    LANG = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
+    DISABLE_AUTO_TITLE = "true";
   };
 
   programs.home-manager.enable = true;
@@ -44,6 +47,8 @@
     shellAliases = {
       g = "git";
       nv = "nvim";
+      nvd = "nvim -d";
+      # "'-'" = "cd -";
       ".." = "cd ..";
       "..." = "cd ../..";
       l = "exa -xa";
@@ -51,7 +56,6 @@
       _ = "sudo";
       pls = "sudo";
       please = "sudo";
-      # tf = "terraform";
 
       # Estas alias son para hacer mi vida un poco mas facil
       update = "sudo nixos-rebuild switch --flake ~/Developer/oss/rogeruiz/github/chromebook113180/#cb113180";
@@ -63,4 +67,8 @@
     initExtraFirst = "eval \"$(starship init zsh)\"";
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
