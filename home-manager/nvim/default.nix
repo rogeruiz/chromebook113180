@@ -81,6 +81,8 @@ in
       editorconfig-nvim
       vim-illuminate
 
+      zen-mode-nvim
+
       neodev-nvim
 
       (fromGitHub {

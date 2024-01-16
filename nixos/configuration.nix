@@ -95,7 +95,6 @@
 
     alacritty
     starship
-    tmux
     rustup
     openssl_3_2
     git

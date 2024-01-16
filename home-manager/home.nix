@@ -71,4 +71,23 @@
     enable = true;
     enableZshIntegration = true;
   };
+
+  programs.tmux = {
+    enable = true;
+    keyMode = "vi";
+    plugins = with pkgs.tmuxPlugins; [
+      catppuccin
+      fuzzback
+      jump
+      resurrect
+      sensible
+      tmux-thumbs
+    ];
+    mouse = true;
+    shell = "/home/yo/.nix-profile/bin/zsh";
+    shortcut = "b";
+    terminal = "tmux-256color";
+    tmuxp.enable = true;
+  };
+
 }
