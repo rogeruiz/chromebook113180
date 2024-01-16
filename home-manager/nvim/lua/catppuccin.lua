@@ -46,7 +46,6 @@ local yo_catppuccin = function()
             markdown = true,
             mason = true,
             mini = false,
-            -- native_lsp = true,
             navic = true,
             neotree = true,
             noice = true,
@@ -55,6 +54,22 @@ local yo_catppuccin = function()
             ts_rainbow2 = true,
             which_key = true,
             window_picker = true,
+            treesitter = true,
+            native_lsp = {
+                enabled = true,
+                virtual_text = {
+                    errors = {},
+                    hints = {},
+                    warnings = {},
+                    information = {},
+                },
+                underlines = {
+                    errors = {},
+                    hints = {},
+                    warnings = {},
+                    information = {},
+                },
+            },
         },
     })
     vim.cmd.colorscheme 'catppuccin'

@@ -28,13 +28,7 @@ in
 
     # Este no es un plugin en si pero un archivo de Lua que
     # aggrega LSP y autocompletion y mas.
-    #./language-server.nix
-    ./lsp-diagnostics.nix
-    ./lsp-fmt.nix
-    ./lsp-highlights.nix
-    ./lsp-keymaps.nix
-    ./lsp-ui.nix
-    ./lsp-complete.nix
+    ./language-server.nix
 
     # tiene que estar al final pa que se imprime al principio
     ./base.nix

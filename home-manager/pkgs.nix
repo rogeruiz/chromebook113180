@@ -9,6 +9,10 @@
     uutils-coreutils-noprefix
     jq
 
+    just
+
+    python3
+
     gh
 
     blahaj
@@ -32,6 +36,13 @@
 
     tree-sitter
     lua-language-server
+    nixd
+    yaml-language-server
+    typescript
+    nodePackages.typescript-language-server
+    python311Packages.python-lsp-server
+    marksman
+    go
     shellcheck
 
     irssi
