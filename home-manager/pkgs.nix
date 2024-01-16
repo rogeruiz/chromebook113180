@@ -26,6 +26,8 @@
 
     entr
 
+    rofi
+
     universal-ctags
 
     tree-sitter
