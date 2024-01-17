@@ -9,6 +9,8 @@
     uutils-coreutils-noprefix
     jq
 
+    direnv
+
     just
 
     python3
