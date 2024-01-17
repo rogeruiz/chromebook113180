@@ -39,6 +39,7 @@ local yo_telescope = function ()
     vim.keymap.set('n', '<leader>bg', bts.live_grep, { desc = '[B]uscar con [G]rep' })
     vim.keymap.set('n', '<leader>bd', bts.diagnostics, { desc = '[B]uscar [D]iagnóstico' })
     vim.keymap.set('n', '<leader>br', bts.resume, { desc = '[B]uscar [R]eanudar' })
+    vim.keymap.set('n', '<leader>b#', bts.lsp_document_symbols, { desc = '[B]uscar [#] Symbolos' })
 end
 
 yo_telescope()

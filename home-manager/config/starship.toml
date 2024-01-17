@@ -51,6 +51,13 @@ symbol = "  "
 detect_files = [".terraform-version"]
 format = "[ $symbol ](bg:mauve fg:surface0)[ $version ](italic bg:surface0 fg:mauve)"
 
+[nix_shell]
+symbol = "󱄅 "
+impure_msg = '[  ](bold fg:surface0 bg:red)'
+pure_msg = '[  ](bold fg:surface0 bg:green)'
+unknown_msg = '[  ](bold fg:surface0 bg:yellow)'
+format = "[ $symbol ](bg:sky fg:surface0)[ $state $name ](italic bg:surface0 fg:sky)"
+
 [aws]
 symbol = "  "
 expiration_symbol = ""

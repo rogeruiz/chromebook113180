@@ -13,6 +13,26 @@ local yo_telekasten = function()
     vim.keymap.set("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>")
     vim.keymap.set("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>")
     vim.keymap.set("n", "<leader>zt", "<cmd>Telekasten toggle_todo<CR>")
+
+    require("zen-mode").setup({
+        window = {
+            backdrop = 0.88,
+        },
+        plugins = {
+            gisigns = {
+                enabled = true,
+            },
+            tmux = {
+                enabled = true,
+            },
+            alacritty = {
+                enabled = true,
+                font = "10",
+            }
+        },
+    })
+
+    vim.keymap.set("n", "<leader>zm", "<cmd>ZenMode<cr>")
 end
 
 yo_telekasten()
