@@ -48,7 +48,7 @@
       g = "git";
       nv = "nvim";
       nvd = "nvim -d";
-      # "'-'" = "cd -";
+      "-- -" = "cd -";
       ".." = "cd ..";
       "..." = "cd ../..";
       l = "exa -xa";
@@ -60,7 +60,10 @@
     enableCompletion = true;
     enableAutosuggestions = true;
     defaultKeymap = "viins";
-    initExtraFirst = "eval \"$(starship init zsh)\"";
+    initExtraFirst = ''
+      eval "$(starship init zsh)"
+      eval "$(direnv hook zsh)"
+    '';
   };
 
   programs.zoxide = {

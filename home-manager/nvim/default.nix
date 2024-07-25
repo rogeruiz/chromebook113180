@@ -33,11 +33,11 @@ in
     # tiene que estar al final pa que se imprime al principio
     ./base.nix
   ];
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
+  # nixpkgs.overlays = [
+  #   (import (builtins.fetchTarball {
+  #     url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+  #   }))
+  # ];
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -45,7 +45,7 @@ in
     vimAlias = true;
     vimdiffAlias = true;
     withNodeJs = true;
-    package = pkgs.neovim-nightly;
+    # package = pkgs.neovim-nightly;
     plugins = with pkgs.vimPlugins; [
       (
         nvim-treesitter.withPlugins (

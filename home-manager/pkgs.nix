@@ -4,6 +4,7 @@
   # medioambiente
   home.packages = with pkgs; [
     lynx
+    lagrange
     eza
     ripgrep
     uutils-coreutils-noprefix
